@@ -1,0 +1,1166 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #172554);
+    color: #e2e8f0;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+
+/* ==============================
+   BARRA DE NAVEGACIÓN
+============================== */
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 30px;
+
+    background: rgba(15, 23, 42, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+
+/* ==============================
+   TARJETAS
+============================== */
+
+body > section {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+
+    background: rgba(255, 255, 255, 0.97);
+    color: #1e293b;
+
+    padding: 45px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+
+    transition: 0.3s;
+}
+
+body > section:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ==============================
+   PORTADA
+============================== */
+
+.hero {
+    text-align: center;
+    padding: 70px 30px !important;
+}
+
+.foto-perfil {
+    width: 210px;
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #38bdf8;
+
+    box-shadow:
+        0 0 30px rgba(56, 189, 248, 0.45);
+
+    margin-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.05);
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    font-size: 19px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   BOTONES
+============================== */
+
+.contactos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 150px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    color: white !important;
+    text-decoration: none !important;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.btn i {
+    margin-right: 9px;
+    font-size: 18px;
+}
+
+.btn-whatsapp {
+    background: #22c55e;
+}
+
+.btn-instagram {
+    background: linear-gradient(
+        45deg,
+        #f97316,
+        #ec4899,
+        #8b5cf6
+    );
+}
+
+.btn-linkedin {
+    background: #0284c7;
+}
+
+
+/* ==============================
+   TÍTULOS DE SECCIONES
+============================== */
+
+section:not(.hero) h2 {
+    font-size: 30px;
+    color: #0f172a;
+
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #38bdf8;
+}
+
+section:not(.hero) p {
+    font-size: 17px;
+    color: #475569;
+}
+
+
+/* ==============================
+   ANIMACIÓN
+============================== */
+
+.hero {
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   CELULARES
+============================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    body > section {
+        padding: 30px 20px;
+    }
+
+    .hero {
+        padding: 45px 20px !important;
+    }
+
+    .foto-perfil {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .contactos {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    section:not(.hero) h2 {
+        font-size: 24px;
+    }
+}/* ==============================
+   SECCIONES DE INFORMACIÓN
+============================== */
+
+.info-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.section-icon {
+    min-width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #2563eb
+    );
+
+    color: white;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content h2 {
+    margin-top: 0 !important;
+}
+
+.section-content > p {
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   TARJETA DE EXPERIENCIA
+============================== */
+
+.info-card {
+    padding: 22px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    border-left: 4px solid #38bdf8;
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.info-card h3 i {
+    color: #0284c7;
+    margin-right: 8px;
+}
+
+.info-card p {
+    color: #64748b;
+}
+
+
+/* ==============================
+   SERVICIOS
+============================== */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.service-card {
+    padding: 25px 20px;
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 1px solid #e2e8f0;
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-card > i {
+    font-size: 32px;
+
+    color: #0284c7;
+
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #0f172a;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #64748b;
+
+    font-size: 14px !important;
+}
+
+
+/* ==============================
+   INFORMACIÓN DE CONTACTO
+============================== */
+
+.contact-info {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.contact-info div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    background: #f8fafc;
+
+    border-radius: 12px;
+
+    border: 1px solid #e2e8f0;
+}
+
+.contact-info i {
+    color: #0284c7;
+
+    font-size: 19px;
+}
+
+.contact-info a {
+    color: #334155;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #0284c7;
+}
+
+
+/* ==============================
+   PIE DE PÁGINA
+============================== */
+
+footer {
+    max-width: 1100px;
+
+    margin: 40px auto 10px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+footer p:first-child {
+    color: #cbd5e1;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==============================
+   CELULAR
+============================== */
+
+@media (max-width: 700px) {
+
+    .info-section {
+        flex-direction: column;
+    }
+
+    .section-icon {
+        min-width: 55px;
+        height: 55px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info div {
+        width: 100%;
+    }
+}/* =========================================
+   ANIMACIONES ELEGANTES
+========================================= */
+
+/* Entrada general */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Foto de perfil */
+
+@keyframes profileGlow {
+
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(56, 189, 248, 0.25),
+            0 0 40px rgba(56, 189, 248, 0.10);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(56, 189, 248, 0.55),
+            0 0 70px rgba(56, 189, 248, 0.20);
+    }
+}
+
+.foto-perfil {
+    animation:
+        profileGlow 4s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: 0.6s;
+}
+
+.btn:hover::before {
+    left: 130%;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.experience-card,
+.education-card,
+.skill-card,
+.service-card,
+.info-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.experience-card:hover,
+.education-card:hover,
+.skill-card:hover,
+.service-card:hover,
+.info-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(15, 23, 42, 0.12);
+
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.section-icon {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.info-section:hover .section-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.45);
+
+}
+
+
+/* =========================================
+   TEXTO PRINCIPAL
+========================================= */
+
+.hero h1 {
+    animation:
+        fadeUp 0.9s ease both;
+}
+
+.hero .tagline {
+    animation:
+        fadeUp 0.9s ease 0.15s both;
+}
+
+.hero-description {
+    animation:
+        fadeUp 0.9s ease 0.3s both;
+}
+
+.hero .contactos {
+    animation:
+        fadeUp 0.9s ease 0.45s both;
+}
+
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+========================================= */
+
+.navbar {
+    animation:
+        fadeUp 0.7s ease both;
+}
+
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #38bdf8;
+
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   EFECTO DE BRILLO EN TARJETAS
+========================================= */
+
+.skill-card,
+.education-card,
+.experience-card {
+
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before,
+.education-card::before,
+.experience-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+    left: -100%;
+
+    width: 200%;
+    height: 200%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.10),
+            transparent 55%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+}
+
+.skill-card:hover::before,
+.education-card:hover::before,
+.experience-card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+/* =========================================
+   ICONOS DE HABILIDADES
+========================================= */
+
+.skill-card > i,
+.education-card > i {
+
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.skill-card:hover > i,
+.education-card:hover > i {
+
+    transform:
+        scale(1.2)
+        translateY(-3px);
+
+    color: #38bdf8;
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(
+        #38bdf8,
+        #2563eb
+    );
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+}.scroll-hidden {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-hidden.visible {
+    opacity: 1;
+    transform: translateY(0);
+}/* =========================================================
+   ANIMACIONES PROFESIONALES
+   ========================================================= */
+
+/* Aparición general */
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Movimiento suave de la foto */
+@keyframes brilloPerfil {
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(56, 189, 248, 0.25),
+            0 0 40px rgba(56, 189, 248, 0.10);
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(56, 189, 248, 0.55),
+            0 0 70px rgba(56, 189, 248, 0.20);
+    }
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    animation: brilloPerfil 4s ease-in-out infinite;
+}
+
+/* Título principal */
+.hero h1 {
+    animation: aparecerSuave 0.8s ease both;
+}
+
+/* Subtítulo */
+.hero .tagline {
+    animation: aparecerSuave 0.8s ease 0.15s both;
+}
+
+/* Descripción */
+.hero-description {
+    animation: aparecerSuave 0.8s ease 0.3s both;
+}
+
+/* Botones */
+.hero .contactos {
+    animation: aparecerSuave 0.8s ease 0.45s both;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.experience-card,
+.education-card,
+.skill-card {
+    position: relative;
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Cuando aparecen */
+.experience-card.visible,
+.education-card.visible,
+.skill-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Efecto al pasar el mouse */
+.experience-card:hover,
+.education-card:hover,
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow:
+        0 18px 35px rgba(15, 23, 42, 0.15),
+        0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+
+/* Brillo que pasa por encima de la tarjeta */
+.experience-card::before,
+.education-card::before,
+.skill-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+    left: -100%;
+
+    width: 200%;
+    height: 200%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.12),
+            transparent 55%
+        );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+
+    pointer-events: none;
+}
+
+.experience-card:hover::before,
+.education-card:hover::before,
+.skill-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+.skill-card > i,
+.education-card > i {
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.skill-card:hover > i,
+.education-card:hover > i {
+    transform: scale(1.2) translateY(-4px);
+    color: #38bdf8;
+}
+
+
+/* =========================================================
+   ICONOS DE LAS SECCIONES
+   ========================================================= */
+
+.section-icon {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.info-section:hover .section-icon {
+    transform: rotate(-5deg) scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(56, 189, 248, 0.35),
+        0 0 35px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Brillo que atraviesa el botón */
+.btn::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+.btn:hover::before {
+    left: 130%;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.navbar {
+    animation: aparecerSuave 0.7s ease both;
+}
+
+.navbar a {
+    position: relative;
+}
+
+/* Línea debajo de los enlaces */
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #38bdf8;
+
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.info-section {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.info-section:hover {
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        #38bdf8,
+        #2563eb
+    );
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+}
+
+
+/* =========================================================
+   ANIMACIÓN AL HACER SCROLL
+   ========================================================= */
+
+.scroll-hidden {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-hidden.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
